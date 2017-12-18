@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.9.17
 MAINTAINER accent
-EXPOSE 80 8500
+EXPOSE 80 8500 443
 VOLUME ["/var/www", "/tmp/config"]
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,6 +10,7 @@ RUN apt-get install -y imagemagick --fix-missing
 #apache rewrite
 RUN php5enmod mcrypt
 RUN a2enmod rewrite
+RUN a2enmod ssl
 ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
 ADD ./build/my_init.d/ /etc/my_init.d/
