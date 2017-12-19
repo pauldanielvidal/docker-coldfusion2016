@@ -8,8 +8,9 @@ cd /tmp
 if [ ! -f "ColdFusion_2016_WWEJ_linux64.bin" ]
 then
     wget https://s3-eu-west-1.amazonaws.com/accent-docker/ColdFusion_2016_WWEJ_linux64.bin
-    chmod 755 ColdFusion_2016_WWEJ_linux64.bin
 fi
+
+chmod 755 ColdFusion_2016_WWEJ_linux64.bin
 
 # Add user to run coldfusion
 useradd -c "user for colfusion" -M -G www-data coldfusion
