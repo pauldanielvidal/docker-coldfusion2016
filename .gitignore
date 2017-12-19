@@ -3,3 +3,5 @@
 certs/docker-apache-selfsigned.crt
 certs/docker-apache-selfsigned.key
 installer/ColdFusion_2016_WWEJ_linux64.bin
+build/install/certs/docker-apache-selfsigned.crt
+build/install/certs/docker-apache-selfsigned.key
